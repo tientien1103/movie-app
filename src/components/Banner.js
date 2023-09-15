@@ -5,10 +5,9 @@ import apiService from "../app/apiService";
 import requests from "./Requests";
 
 const DivHead = styled("div")(({ theme }) => ({
-  height: "90vh",
+  height: "100vh",
   position: "relative",
   marginTop: 65,
-  objectFit: "contain",
   [theme.breakpoints.up("xs")]: {
     height: "30vh",
   },
@@ -42,6 +41,7 @@ function Banner() {
   return (
     <DivHead>
       <img
+        style={{ objectFit: "fill" }}
         width="100%"
         height="100%"
         alt={movies.title}
